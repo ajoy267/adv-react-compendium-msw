@@ -9,3 +9,10 @@ export async function getPokemon(query) {
 
   return data;
 }
+
+export async function getAllPokemon() {
+  const resp = await fetch(`https://pokedex-alchemy.herokuapp.com/api/pokedex`);
+  const data = await resp.json();
+
+  return data;
+}

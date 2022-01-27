@@ -1,5 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import Home from './Home';
+// import { rest } from 'msw';
+// import { setupServer } from 'msw/node';
+
+// const server = setupServer(rest.get());
 
 test('should render loading state', () => {
   render(<Home />);
