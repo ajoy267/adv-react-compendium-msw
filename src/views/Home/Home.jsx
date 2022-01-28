@@ -15,20 +15,17 @@ export default function Home() {
       setPokemon(data.results);
       setLoading(false);
     };
-    fetchData();
-  }, [query]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLoading(true);
-  };
+    if (loading) {
+      fetchData();
+    }
+  }, [query, loading]);
 
   if (loading) return <h1>loading...</h1>;
 
   return (
     <div>
       <h1>Pokemon List</h1>
-      <Controls query={query} setQuery={setQuery} handleSubmit={handleSubmit} />
+      <Controls query={query} setQuery={setQuery} setLoading={setLoading} />
       <PokeList pokemon={pokemon} />
     </div>
   );

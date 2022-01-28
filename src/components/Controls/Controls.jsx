@@ -1,12 +1,12 @@
 import React from 'react';
 
-export default function Controls({ query, setQuery, handleSubmit }) {
+export default function Controls({ query, setQuery, setLoading }) {
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} />
-        <button type="submit">Search</button>
-      </form>
+      <input type="text" value={query} onInput={(e) => setQuery(e.target.value)} />
+      <button onClick={() => setLoading(true)} type="submit">
+        Search
+      </button>
     </div>
   );
 }
