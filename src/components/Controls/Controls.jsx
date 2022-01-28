@@ -5,9 +5,7 @@ export default function Controls({ query, setQuery, handleSubmit }) {
     <div>
       <form onSubmit={handleSubmit}>
         <input type="text" value={query} onChange={(e) => setQuery(e.target.value)} />
-        <button type="submit" onClick={(e) => setQuery(e.target.value)}>
-          Search
-        </button>
+        <button type="submit">Search</button>
       </form>
     </div>
   );
