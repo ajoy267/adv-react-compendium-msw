@@ -61,7 +61,7 @@ const server = setupServer(
 beforeAll(() => server.listen());
 afterAll(() => server.close());
 
-test.only('pokemon should search by query', async () => {
+test('pokemon should search by query', async () => {
   render(<Home />);
 
   const searchInput = await screen.findByRole('textbox');
