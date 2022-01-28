@@ -54,12 +54,7 @@ const pokemon = {
 
 const server = setupServer(
   rest.get('https://pokedex-alchemy.herokuapp.com/api/pokedex', (req, res, ctx) => {
-    const select = req.url.searchParams.get('pokemon');
-    if (select === 'butterfree') {
-      console.log('hello', select);
-      return res(ctx.json([pokemon]));
-    }
-    return res(ctx.status(500));
+    return res(ctx.json(pokemon));
   })
 );
 

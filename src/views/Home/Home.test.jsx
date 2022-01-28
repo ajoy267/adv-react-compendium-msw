@@ -685,7 +685,7 @@ const server = setupServer(
 beforeAll(() => server.listen());
 afterAll(() => server.close());
 
-test.skip('should render loading state', () => {
+test('should render loading state', () => {
   render(<Home />);
 
   const loading = screen.getByText(/loading/i);
@@ -693,7 +693,7 @@ test.skip('should render loading state', () => {
   expect(loading).toBeInTheDocument();
 });
 
-test.skip('should render Controls and Pokemon List', async () => {
+test('should render Controls and Pokemon List', async () => {
   render(<Home />);
 
   const heading = await screen.findByRole('heading', { name: /pokemon/i });
