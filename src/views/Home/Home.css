@@ -1,0 +1,26 @@
+h1 {
+  font-family: cursive;
+  font-size: 2.5rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.brewery-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid black 2px;
+  height: 325px;
+  width: 225px;
+  margin: 10px;
+}
+
+.brewery-card h2 {
+  font-family: cursive;
+  font-size: 1.5rem;
+}
